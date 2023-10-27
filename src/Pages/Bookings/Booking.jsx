@@ -20,7 +20,7 @@ const Booking = ({ booking, setBooking, bookings }) => {
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "Service has been deleted.", "success");
 
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://car-doctor-server-g8g2nf4kt-bushras-projects-96f4a913.vercel.app/bookings/${id}`, {
           method: 'DELETE'
         })
           .then((res) => res.json())
@@ -39,7 +39,7 @@ const Booking = ({ booking, setBooking, bookings }) => {
   
 
   const handleUpdateConfirm = id =>{
-      fetch(`http://localhost:5000/bookings/${id}`,{
+      fetch(`https://car-doctor-server-g8g2nf4kt-bushras-projects-96f4a913.vercel.app/bookings/${id}`,{
           method: 'PATCH',
           headers: {
             'content-type': 'application/json',

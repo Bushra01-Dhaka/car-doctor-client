@@ -28,7 +28,7 @@ const CheckOut = () => {
     }
     console.log(booking);
 
-    fetch(`http://localhost:5000/bookings`,{
+    fetch(`https://car-doctor-server-g8g2nf4kt-bushras-projects-96f4a913.vercel.app/bookings`,{
       method: 'POST',
       headers: {
         'content-type': 'application/json',
