@@ -82,7 +82,7 @@ const Login = () => {
 
   return (
     <div className='mx-auto'>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row gap-20">
 
           <div className=" w-full lg:w-1/2">
@@ -95,7 +95,7 @@ const Login = () => {
 
           <div className="card flex-shrink-0 w-full max-w-sm md:max-w-md shadow-2xl bg-base-100 px-2 lg:px-0">
             <form onSubmit={handleLogIn} className="card-body lg:p-[70px]">
-            <h1 className="text-5xl text-center  font-bold">Login</h1>
+            <h1 className="text-5xl text-center text-black font-bold">Login</h1>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -144,14 +144,14 @@ const Login = () => {
 
 
               <div className='mx-auto'>
-                <p className='text-center'>Or Sign In with</p>
+                <p className='text-center text-black'>Or Sign In with</p>
                 <div className="flex gap-4 justify-center my-8 text-lg text-[#FF3811]">
                     <FaFacebook></FaFacebook>
                     <button onClick={handleGoogleSignIn}>  <FaGoogle></FaGoogle></button>
                   <button onClick={handleGithubLogin}><FaGithub></FaGithub></button>
                  
                 </div>
-                <p>New to Car Doctor? <Link to='/signUp' className='font-bold underline text-[#FF3811]'>Sign Up</Link></p>
+                <p className='text-black'>New to Car Doctor? <Link to='/signUp' className='font-bold underline text-[#FF3811]'>Sign Up</Link></p>
               </div>
             </form>
           </div>

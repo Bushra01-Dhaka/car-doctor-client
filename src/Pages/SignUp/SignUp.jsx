@@ -100,7 +100,7 @@ const SignUp = () => {
 
   return (
     <div className="mx-auto">
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row gap-20">
           <div className=" w-full lg:w-1/2">
             <img className="" src={login_img} alt="" />
@@ -108,7 +108,7 @@ const SignUp = () => {
 
           <div className="card flex-shrink-0 w-full max-w-sm md:max-w-md shadow-2xl bg-base-100 px-2 lg:px-0">
             <form onSubmit={handleSignUp} className="card-body lg:p-[70px] lg:pb-0">
-              <h1 className="text-5xl text-center  font-bold">Sign Up</h1>
+              <h1 className="text-5xl text-center text-black  font-bold">Sign Up</h1>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -171,7 +171,7 @@ const SignUp = () => {
 
 
             <div className="mx-auto py-8">
-                <p className="text-center">Or Sign Up with</p>
+                <p className="text-center text-black">Or Sign Up with</p>
                 <div className="flex gap-4 justify-center my-4 text-lg text-[#FF3811]">
                   <FaFacebook></FaFacebook>
                   <button onClick={handleGoogleSignIn}>  <FaGoogle></FaGoogle></button>
@@ -179,7 +179,7 @@ const SignUp = () => {
                  
                  
                 </div>
-                <p>
+                <p className="text-black">
                   Already have an account?{" "}
                   <Link
                     to="/login"

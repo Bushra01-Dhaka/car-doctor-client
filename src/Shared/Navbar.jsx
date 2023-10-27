@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import PropTypes from "prop-types";
 
-const Navbar = () => {
+const Navbar = ({ toggleDarkMode, isDarkMode }) => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleSignOut = () => {
@@ -24,10 +25,7 @@ const Navbar = () => {
         <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/services">Services</Link>
-      </li>
-      <li>
-        <Link to="/blog">Blog</Link>
+        <Link to="/bookings">My Bookings</Link>
       </li>
       <li>
         <Link to="/contact">Contact</Link>
@@ -35,7 +33,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -114,7 +112,7 @@ const Navbar = () => {
         <div>
           <label className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
-            <input type="checkbox" />
+            <input type="checkbox" onChange={toggleDarkMode} checked={isDarkMode}/>
 
             {/* sun icon */}
             <svg
@@ -139,5 +137,10 @@ const Navbar = () => {
     </div>
   );
 };
+
+Navbar.propTypes = {
+  toggleDarkMode: PropTypes.func,
+  isDarkMode: PropTypes.bool
+}
 
 export default Navbar;

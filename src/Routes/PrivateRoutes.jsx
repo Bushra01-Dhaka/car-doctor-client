@@ -15,7 +15,7 @@ const PrivateRoutes = ({children}) => {
             <FadeLoader color="#FF3811" radius={30} />
         </div>
     }
-    if(user) 
+    if(user?.email) 
     {
         return children ;
     }
